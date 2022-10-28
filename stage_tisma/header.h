@@ -5,14 +5,16 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>
+#include <stdlib.h>
+
 
 # define BUF_SIZE 16384
 
 typedef struct	s_line
 {
-	int	tps;
-	int	speed;
-	int	fractionmassique;
+	double	tps;
+	double	speed;
+	double	fractionmassique;
 }				t_line;
 
 int ft_size_file(char *file_path);
@@ -23,5 +25,6 @@ void	ft_fill_tab(char **tab, char *str, char *charset, int wordnbr);
 char *file_to_str(char *file_path, int file_size);
 char	**ft_split(char *str);
 void ft_putstr(char *str);
+void	free_tab(char **tab);
 
 #endif
